@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a style="padding: 3px 8px 3px 15px" href="/">
+        <img src="/images/logo.png" width="120" height="80">
+      </a>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            {{#if session}}
+            <a href="/auth/logout" class="button is-danger">
+              <strong>Cerrar sesión</strong>
+            </a>
+            {{else}}
+            <a href="/auth/signup" class="button is-primary">
+              <strong>Registrarse</strong>
+            </a>
+            <a href="/auth/login" class="button is-light">
+              Iniciar sesión
+            </a>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="hero is-danger">
+    {{{body}}}
+  </section>
+  <script src="/javascripts/script.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+</body>
+
+</html>
